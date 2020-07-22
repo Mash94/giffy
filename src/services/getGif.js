@@ -8,10 +8,12 @@ export default function getGif({keyword = 'trends', limit} = {}){
     .then(res => res.json())
     .then(response => {
       const {data} = response
-      const gifs = data.map(image => {return{
-        image: image.images.downsized_medium.url,
-        id: image.id
-      }})
+      const gifs = data.map(image => {
+        return{
+          image: image.images.downsized_medium.url,
+          id: image.id
+        }
+      })
       return gifs
     })
 }
