@@ -11,7 +11,8 @@ export default function getGif({keyword = 'trends', limit} = {}){
       const gifs = data.map(image => {
         return{
           image: image.images.downsized_medium.url,
-          id: image.id
+          id: image.id,
+          title: image.title
         }
       })
       return gifs
