@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import getGif from './services/getGif'
 
-function App() {
+function App() {  // min 48.20
   const [gifs, setGifs] = useState([])
 
   useEffect(() => {         
