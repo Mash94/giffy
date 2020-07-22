@@ -9,7 +9,7 @@ function App() {
     // por defecto useEffect se ejecuta cada vez que se re-renderiza el componente
       //console.log('Efecto')
       const keyword = 'evangelion'
-      const limit = 2
+      const limit = 5
       getGif({keyword, limit}).then(gifs => setGifs(gifs))
     }, [])  // Como segundo paramentro a useEffect se le pasan las dependencias
     // Las dependencias son variables o informacion que se cambia debe ejecutarse este efecto
