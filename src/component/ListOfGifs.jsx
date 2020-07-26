@@ -3,9 +3,10 @@ import Gif from './Gif'
 import getGif from '../services/getGif'
 
 
-export default function ListOfGifs({keyword='panda', limit=10}){
+export default function ListOfGifs({params}){
   const [gifs, setGifs] = useState([])
-
+  const {keyword,limit} = params
+  
   useEffect(() => {        // por defecto useEffect se ejecuta cada vez que se re-renderiza el componente 
     getGif({keyword, limit}).then(gif => setGifs(gif))
   }, [keyword,limit])  // Como segundo paramentro a useEffect se le pasan las dependencias
